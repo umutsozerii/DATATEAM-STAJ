@@ -5,6 +5,7 @@
 ![ana_ekran](https://user-images.githubusercontent.com/33090465/95522208-25fd3500-09d4-11eb-9fc9-33459bc0e878.PNG)
 
 **This is the file structure of the app**
+<br>
 ![uygulamanın dosya yapısı](https://user-images.githubusercontent.com/33090465/95523062-5ba31d80-09d6-11eb-98a1-ea7f8df90ecb.PNG)
 
 **Edit button**
@@ -22,9 +23,9 @@
 
 ![add_tuşu](https://user-images.githubusercontent.com/33090465/95523153-97d67e00-09d6-11eb-85b5-00005545c6f2.PNG)
 
-As you can see, we can see which data the application sends to the server with the information in the console.
-Respectively
-1.Edit
-2.Update
-3.Delete
-4.Add Student
+As you can see, we can see which data the application sends to the server with the information in the console.<br>
+Respectively<br>
+1.Edit <br>
+2.Update <br>
+3.Delete <br>
+4.Add Student <br>
