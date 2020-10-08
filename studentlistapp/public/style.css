@@ -1,0 +1,35 @@
+body{
+    background-image: url(neden-cankaya-universitesi.jpg); 
+}
+/* this is background image */
+.btn-1 {
+    border: none;
+    color: white;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+}
+
+.btn-2 {
+    border: none;
+    color: white;
+    background-color: #b12222;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #b12222;
+    border-radius: 10px;
+}
+
+.btn-3 {
+    border: none;
+    color: white;
+    background-color: #1832a8;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #1832a8;
+    border-radius: 10px;
+}
+
+/* this is buton styles that i found on the internet */

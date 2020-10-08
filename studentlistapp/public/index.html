@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="AppModule">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- I added the bootstrap to file -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script> 
+    <!-- I added the angular.j to file -->
+    <script src="/controllers/controller.js"></script>
+    <!-- I linked my controller.js file with my index.html file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- I linked my style.css file with my index.html file -->
+    <title>UMUT SOZERI</title>
+</head>
+<body>
+    
+    <div class="container" ng-controller="controller">
+        <!-- I got everything into a container with container and assigned a controller with ng-controller. (The controller will check the interactions between our vision and what the user sees, i.e. index.html file)  -->
+        <h1>Student List App</h1>
+        <table class="table table-hover table-dark">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <!-- One colmn space -->
+                    <th>Name</th>
+                    <th>Surame</th>
+                    <th>Email</th>
+                    <th>Student No</th>
+                    <!-- Table Headers -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><button class="btn-3" ng-click="updatestudent()">Update</button>
+                    <!-- I created the Update button and redirected it to the update function in my controller.js file. -->
+                    <td><input class="form-control" ng-model="student.data.name"></td> 
+                    <td><input class="form-control" ng-model="student.data.surname"></td> 
+                    <td><input class="form-control" ng-model="student.data.email"></td>
+                    <td><input class="form-control" ng-model="student.data.studentno"></td>
+                    <!-- These are input boxes -->
+                    <td><button class="btn-1" ng-click="addstudent()">Add Student</button></td>
+                    <!-- I created the Add Student button and redirected it to the addStudent function in my controller.js file. -->
+                    <!-- 
+                        *btn-1,btn-2,btn-3 adds css styling, form-control  bootstrap adds styling .
+                        *ng-model connects our controller with user input.
+                        *Buttons clicked with ng-click call functions related to that button.
+                    -->
+                </tr>
+                <tr ng-repeat="student in studentlist">
+                    <!-- 
+                        *ng-repeat is an angular feature and 4 students repeat and place their data in the lines here.
+                        *student in studentlist: It allows us to separate our students one by one in the studentlist variable..
+                        *student.name , student.surname, student.email ve student.studentno it will be filled with data in studentlist variable.. 
+                    -->
+                    <td>&nbsp;</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.surname}}</td>
+                    <td>{{student.email}}</td>
+                    <td>{{student.studentno}}</td>
+                    <td><button class="btn-2" ng-click="delete(student._id)">Delete</button></td>
+                    <!-- delete butonu ile controller.js dosyasındaki delete fonksiyonunu çağırıyor -->
+                    <td><button class="btn-3" ng-click="edit(student._id)">Edit</button></td>
+                    <!-- edit butonu ile controller.js dosyasındaki edit fonksiyonunu çağırıyor -->
+                </tr>
+                <td>Total number of students = </td>
+                <td>{{totalnumberofstudents}}</td> 
+                <!-- On the left-bottom side we can see total number of students in the list -->
+
+            </tbody>
+        </table>
+    </div>  
+</body>
+</html>
